@@ -37,3 +37,28 @@ gem 'jquery-rails'
 
 # To use debugger
 # gem 'debugger'
+
+gem 'devise'
+gem 'figaro'
+gem 'haml-rails'
+gem 'thin'
+
+group :assets do
+  gem 'compass-rails'
+  gem 'therubyracer', :platform=>:ruby
+  gem 'zurb-foundation'
+end
+
+group :development do
+  gem 'better_errors'
+  gem 'binding_of_caller', :platforms=>[:mri_19, :rbx]
+  gem 'html2haml'
+  gem 'quiet_assets'
+end
+
+group :test do
+  gem 'capybara'
+  gem 'minitest-spec-rails'
+  gem 'minitest-wscolor'
+end
+
