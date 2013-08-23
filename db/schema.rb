@@ -11,7 +11,32 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130823102651) do
+ActiveRecord::Schema.define(:version => 20130823121827) do
+
+  create_table "photos", :force => true do |t|
+    t.integer  "profile_id"
+    t.string   "type"
+    t.datetime "created_at",         :null => false
+    t.datetime "updated_at",         :null => false
+    t.string   "image_file_name"
+    t.string   "image_content_type"
+    t.integer  "image_file_size"
+    t.datetime "image_updated_at"
+  end
+
+  create_table "profiles", :force => true do |t|
+    t.string   "name"
+    t.string   "email"
+    t.integer  "age"
+    t.string   "phone_number"
+    t.string   "gender"
+    t.string   "username"
+    t.string   "height"
+    t.string   "password"
+    t.string   "password_confirmation"
+    t.datetime "created_at",            :null => false
+    t.datetime "updated_at",            :null => false
+  end
 
   create_table "users", :force => true do |t|
     t.string   "email",                  :default => "", :null => false
